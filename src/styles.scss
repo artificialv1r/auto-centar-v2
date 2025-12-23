@@ -1,0 +1,167 @@
+@use "variables" as *;
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+  font-family: $arial-font;
+  display: flex;
+  flex-direction: column;
+  color: $primary-color;
+
+  header {
+    nav {
+      background-color: $background-color;
+      display: flex;
+      justify-content: center;
+      ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        li {
+          list-style: none;
+          padding: 0 20px;
+          a {
+            text-decoration: none;
+            font-size: $font-size-small;
+            color: $primary-color;
+            img {
+              height: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #layout {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #main {
+    flex-grow: 1;
+  }
+
+  .sellers {
+    //background-image: url("https://i.ibb.co/Z6HPGPj0/road-without-car.jpg");
+    background-color: $background-color;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50vh;
+    padding: 20px 40px;
+
+    h1 {
+      color: $primary-color;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .locations {
+      display: flex;
+      justify-content: space-around;
+
+      > div {
+        background-color: $background-color-transparent;
+        border-radius: 20px;
+        border: 1px solid white;
+        text-align: center;
+        width: 20%;
+        padding: 0px 20px;
+
+        &:hover {
+          border: 1px solid $primary-color;
+        }
+        h2 {
+          font-weight: 600;
+        }
+        p {
+          text-align: left;
+          font-weight: 600;
+          span {
+            color: $secondary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .cars {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    #car-filter {
+      width: 70dvw;
+      display: flex;
+      justify-content: center;
+    }
+    #filtered-image {
+      width: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #car-spec {
+      width: 60%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .spec-item {
+        width: 50%;
+      }
+    }
+
+    #car-list {
+      width: 30dvw;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    #car-info {
+      width: 35%;
+      transition: all 0.3s ease;
+
+      &.selected {
+        #car-item {
+          background-color: #ffedd5;
+          border: 2px solid $secondary-color;
+        }
+      }
+    }
+    #car-item {
+      background-color: $background-color;
+      border-radius: 20px;
+      border: 1px solid $primary-color;
+      text-align: center;
+      width: 150px;
+      height: 180px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  footer {
+    margin-top: 20px;
+    padding: 0 40px;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $primary-color;
+    a {
+      color: white;
+      text-decoration: none;
+      padding: 0 40px;
+    }
+    a:last-of-type {
+      margin-left: auto;
+    }
+  }
+}

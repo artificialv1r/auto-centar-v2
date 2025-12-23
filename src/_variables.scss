@@ -1,0 +1,17 @@
+$background-color: #dde0e9;
+$background-color-transparent: rgba(255, 255, 255, 0.7);
+$primary-color: #003153;
+$secondary-color: #b96d34;
+$font-size-small: 16px;
+$font-size-medium: 24px;
+$font-size-large: 28px;
+$font-size-extra-large: 34px;
+$arial-font: Arial, Helvetica, sans-serif;
+$breakpoint-extra-small: 576px;
+$breakpoint-medium: 992px;
+
+@mixin responsive($max-screen-size) {
+  @media (max-width: $max-screen-size) {
+    @content;
+  }
+}
